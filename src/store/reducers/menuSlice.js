@@ -25,9 +25,9 @@ export const menuSlice = createSlice({
     },
     deleteItemFood: (state, action) => {
       state.menu.forEach((element) => {
-        if (action.payload) {
-          element.food.splice(action.payload.id, 1);
-        }
+        // if (action.payload) {
+        //   element.food.splice(action.payload.id, 1);
+        // }
       });
     },
   },
