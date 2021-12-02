@@ -1,31 +1,14 @@
 /** @format */
 
-import React, { useState } from "react";
+import React from "react";
+
+import { ListUser } from "./ListUser";
 
 import TextField from "@mui/material/TextField";
 import Button from "@mui/material/Button";
 
-import { useAction } from "../hooks/useAction";
-
-const AddUser = () => {
-  const [user, setUser] = useState("");
-
-  const { addUser } = useAction();
-
-  const handleChange = (e) => {
-    setUser(e.target.value);
-  };
-
-  const handleAdd = () => {
-    const newUser = {
-      id: Date.now(),
-      value: user,
-    };
-    if (user !== "") {
-      addUser(newUser);
-      setUser("");
-    }
-  };
+const AddUser = (props) => {
+  const { user, handleChange, handleAdd } = props;
 
   return (
     <>

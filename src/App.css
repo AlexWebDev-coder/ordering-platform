@@ -37,5 +37,11 @@
 }
 
 .item {
-    /* margin-top: 20px; */
+    display: flex;
+    justify-content: space-between;
+}
+
+.icon-item {
+    display: flex;
+    justify-content: end;
 }
